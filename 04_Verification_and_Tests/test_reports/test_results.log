@@ -1,0 +1,48 @@
+[Host] Launching Virtual STM32 NUCLEO-F446RE Emulator (Scenario: OVEREXPOSURE_RISK)...
+[Host] Communication bridge established.
+[Host] Requesting SCAN_PROFILE: FULL
+[MCU Response] ACK: ACCEPTED (OK)
+
+[Host ML] Processing completed scan (7 points)...
+[Host ML Result] Classified Regime: OVEREXPOSURE_RISK (Confidence: 100.0%)
+[Host Action] Recommendation: ANGLE_ID -> Angle ID 6 (165°)
+[Host] Commanding ANGLE_ID: 6
+[MCU Response] ACK: ACCEPTED (OK)
+[Host] Disconnected.
+[Host] Launching Virtual STM32 NUCLEO-F446RE Emulator (Scenario: OVEREXPOSURE_RISK)...
+[Host] Communication bridge established.
+[Host] Disconnected.
+[Host] Launching Virtual STM32 NUCLEO-F446RE Emulator (Scenario: OVEREXPOSURE_RISK)...
+[Host] Communication bridge established.
+[Host] Commanding ANGLE_ID: 2
+[MCU Response] NACK: REJECTED (ERR_MANUAL_OVERRIDE_ACTIVE)
+[Test] Verified: MCU rejected host command during manual override.
+[Host] Disconnected.
+[Host] Launching Virtual STM32 NUCLEO-F446RE Emulator (Scenario: OVEREXPOSURE_RISK)...
+[Host] Communication bridge established.
+[Host] Commanding ANGLE_ID: 5
+[MCU Response] ACK: ACCEPTED (OK)
+
+[Test] Simulating host link loss for 3.5 seconds...
+[Test] Verified: MCU transitioned to FAULT_HOST_TIMEOUT and homed safely to POS_3 (90°).
+[Host] Disconnected.
+
+test_feature_extraction_structure (test_ml_pipeline.TestMLPipeline.test_feature_extraction_structure) ... ok
+test_normal_diffuse_classification (test_ml_pipeline.TestMLPipeline.test_normal_diffuse_classification) ... ok
+test_overexposure_risk_classification (test_ml_pipeline.TestMLPipeline.test_overexposure_risk_classification) ... ok
+test_partial_scan_early_stopping (test_ml_pipeline.TestMLPipeline.test_partial_scan_early_stopping) ... ok
+test_specular_confuser_classification (test_ml_pipeline.TestMLPipeline.test_specular_confuser_classification) ... ok
+test_canonical_command_encoding (test_protocol.TestProtocol.test_canonical_command_encoding) ... ok
+test_invalid_command_nack_decoding (test_protocol.TestProtocol.test_invalid_command_nack_decoding) ... ok
+test_invalid_command_rejection (test_protocol.TestProtocol.test_invalid_command_rejection) ... ok
+test_mcu_ack_nack_decoding (test_protocol.TestProtocol.test_mcu_ack_nack_decoding) ... ok
+test_mcu_telemetry_decoding (test_protocol.TestProtocol.test_mcu_telemetry_decoding) ... ok
+test_closed_loop_scan_and_classification (test_system_integration.TestSystemIntegration.test_closed_loop_scan_and_classification) ... ok
+test_initial_telemetry_and_state (test_system_integration.TestSystemIntegration.test_initial_telemetry_and_state) ... ok
+test_manual_override_priority (test_system_integration.TestSystemIntegration.test_manual_override_priority) ... ok
+test_watchdog_timeout_on_host_loss (test_system_integration.TestSystemIntegration.test_watchdog_timeout_on_host_loss) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 13.214s
+
+OK

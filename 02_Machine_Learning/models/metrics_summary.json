@@ -1,0 +1,136 @@
+{
+  "test_sample_count": 160,
+  "held_out_sessions": [
+    "SESS_01",
+    "SESS_10",
+    "SESS_12",
+    "SESS_14"
+  ],
+  "comparison_table": [
+    {
+      "model_name": "Parent Rule-Based Baseline",
+      "accuracy": 0.8063,
+      "macro_f1": 0.5932,
+      "overexposure_recall": 1.0,
+      "overexposure_false_alarm": 0.233,
+      "confusion_matrix": [
+        [
+          72,
+          0,
+          0
+        ],
+        [
+          0,
+          57,
+          0
+        ],
+        [
+          7,
+          24,
+          0
+        ]
+      ]
+    },
+    {
+      "model_name": "Ridge Logistic Regression",
+      "accuracy": 0.9938,
+      "macro_f1": 0.9922,
+      "overexposure_recall": 1.0,
+      "overexposure_false_alarm": 0.0,
+      "confusion_matrix": [
+        [
+          72,
+          0,
+          0
+        ],
+        [
+          0,
+          57,
+          0
+        ],
+        [
+          1,
+          0,
+          30
+        ]
+      ]
+    },
+    {
+      "model_name": "Random Forest Classifier",
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "overexposure_recall": 1.0,
+      "overexposure_false_alarm": 0.0,
+      "confusion_matrix": [
+        [
+          72,
+          0,
+          0
+        ],
+        [
+          0,
+          57,
+          0
+        ],
+        [
+          0,
+          0,
+          31
+        ]
+      ]
+    },
+    {
+      "model_name": "Gradient Boosting Classifier",
+      "accuracy": 0.9812,
+      "macro_f1": 0.9762,
+      "overexposure_recall": 1.0,
+      "overexposure_false_alarm": 0.0,
+      "confusion_matrix": [
+        [
+          72,
+          0,
+          0
+        ],
+        [
+          0,
+          57,
+          0
+        ],
+        [
+          3,
+          0,
+          28
+        ]
+      ]
+    },
+    {
+      "model_name": "Partial-Scan Early Stopping Model (4/7 Checkpoints)",
+      "accuracy": 0.95,
+      "macro_f1": 0.9398,
+      "overexposure_recall": 0.9298,
+      "overexposure_false_alarm": 0.0097,
+      "confusion_matrix": [
+        [
+          70,
+          0,
+          2
+        ],
+        [
+          1,
+          53,
+          3
+        ],
+        [
+          1,
+          1,
+          29
+        ]
+      ]
+    }
+  ],
+  "partial_scan_savings": {
+    "confidence_threshold": 0.85,
+    "early_stopping_trigger_rate": 0.7562,
+    "total_scan_time_reduction_pct": 32.41
+  }
+}

@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+
+# Archives & OS Artifacts
+*.zip
+*.tar.gz
+.DS_Store
+Thumbs.db
+
+# Intermediate object files
+01_Firmware/Build/*.o
